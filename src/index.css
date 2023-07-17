@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.primary-btn {
+  background: linear-gradient(90deg, #19d3ae 0%, #0fcfec 100%);
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+}
+.primary-btn:hover{
+  background: linear-gradient(180deg, #19d3ae 0%, #0fcfec 100%);
+  color: rgb(24, 24, 24);
+  transition: 0.3s ease-in-out;
+}
+.secondary-btn{
+  @apply text-white rounded px-3 py-1 transition-colors duration-500 bg-[#3A4256]
+}
+

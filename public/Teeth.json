@@ -1,0 +1,47 @@
+[
+    {
+      "time": "8:00 AM - 9:00 AM",
+      "name": "Teeth Orthodontics",
+      "doctorName": "Dr. Smith",
+      "availableSlots": 9,
+      "allSlots": 20
+    },
+    {
+      "time": "10:05 am - 11:30 am",
+      "name": "Cosmetic Dentistry",
+      "doctorName": "Dr. Johnson",
+      "availableSlots": 13,
+      "allSlots": 20
+
+    },
+    {
+      "time": "4:00 AM - 5:00 AM",
+      "name": "Pediatric Dental",
+      "doctorName": "Dr. Williams",
+      "availableSlots": 12,
+      "allSlots": 20
+
+    },
+    {
+      "time": "5:00 AM - 6:00 AM",
+      "name": "Cavity Protection",
+      "doctorName": "Dr. Anderson",
+      "availableSlots": 8,
+      "allSlots": 20
+    },
+    {
+      "time": "7:05 am - 8:30 am",
+      "name": "Pediatric Dental",
+      "doctorName": "Dr. Davis",
+      "availableSlots": 11,
+      "allSlots": 20
+    },
+    {
+      "time": "9:00 AM - 10:10 AM",
+      "name": "Oral Surgery",
+      "doctorName": "Dr. Wilson",
+      "availableSlots": 15,
+      "allSlots": 20
+    }
+  ]
+  
