@@ -31,6 +31,7 @@ if(isAdminLoading){
           alt=""
         />
         <h2 className="font-semibold pt-5 pb-2">{user?.displayName}</h2>
+        <h2 className="font-medium pb-2">{user?.email}</h2>
        
       </div>
       <div>
@@ -63,31 +64,31 @@ if(isAdminLoading){
             <li className="text-black hover:text-blue-600">
                 <NavLink
                   className={({ isActive }) => (isActive ? activeLink : "")}
-                  to="booked-course"
+                  to="my-appointment"
                 >
                   <span className="flex items-center  gap-1 ">
-                    <BsFillBookmarkCheckFill className="w-5 h-7" /> Booked
-                    Course
+                    <BsFillBookmarkCheckFill className="w-5 h-7" /> 
+                    My Appointments
                   </span>
                 </NavLink>
               </li>
               <li className="text-black hover:text-blue-600">
                 <NavLink
                   className={({ isActive }) => (isActive ? activeLink : "")}
-                  to="enrolled-course"
+                  to="reviews"
                 >
                   <span className="flex items-center  gap-1 ">
-                    <BsFillBookmarkFill className="w-5 h-7" /> Enrolled Course
+                    <BsFillBookmarkFill className="w-5 h-7" /> My Reviews
                   </span>
                 </NavLink>
               </li>
               <li className="text-black hover:text-blue-600">
                 <NavLink
                   className={({ isActive }) => (isActive ? activeLink : "")}
-                  to="payment-history"
+                  to="history"
                 >
                   <span className="flex items-center  gap-1 ">
-                    <BiHistory className="w-5 h-7" /> Payment History
+                    <BiHistory className="w-5 h-7" /> My History
                   </span>
                 </NavLink>
               </li>
