@@ -7,9 +7,9 @@ import Modal from "react-modal";
 import { FaTimes } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { json } from "react-router-dom";
-import useAuth from "../../Component/Hooks/useAuth";
 import useAdmin from "../../Component/Hooks/useAdmin";
 import {toast} from 'react-hot-toast';
+import useAuth from "../../Component/Hooks/UseAuth";
 Modal.setAppElement("#root");
 
 const AvibleSlotes = () => {

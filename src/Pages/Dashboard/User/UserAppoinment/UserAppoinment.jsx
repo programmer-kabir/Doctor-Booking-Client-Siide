@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import useSelected from "../../../../Component/Hooks/useSelected";
 
 const UserAppoinment = () => {
   const [appointmentData] = useSelected();
+  
+
   return (
     <div>
       <h2 className="text-2xl font-semibold">
@@ -23,6 +25,9 @@ const UserAppoinment = () => {
               </th>
               <th scope="col" className="px-6 py-4 font-medium text-gray-900">
                 TREATMENT
+              </th>
+              <th scope="col" className="px-6 py-4 font-medium text-gray-900">
+                Sites
               </th>
               <th scope="col" className="px-6 py-4 font-medium text-gray-900">
                 PAYMENT
@@ -58,6 +63,13 @@ const UserAppoinment = () => {
                   <div className="text-sm">
                     <div className="font-medium text-gray-700">
                       {appointment.serviceName}
+                    </div>
+                  </div>
+                </td>
+                <td className="px-6 py-4 font-normal text-gray-900">
+                  <div className="text-sm">
+                    <div className="font-medium text-gray-700">
+                      {appointment.quantity}
                     </div>
                   </div>
                 </td>

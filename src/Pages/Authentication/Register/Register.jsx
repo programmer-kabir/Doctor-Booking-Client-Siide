@@ -22,7 +22,7 @@ const Register = () => {
     import.meta.env.VITE_IMGUPLOADKEY
   }`;
   const onSubmit = (data) => {
-    // console.log(data);
+    console.log(data);
 
     // Image upload to imgbb
     const image = data.image[0];
@@ -41,7 +41,7 @@ const Register = () => {
         // New Register to user
         newRegister(data.email, data.password)
           .then((result) => {
-            setLoading(tr);
+            setLoading(true);
             const loggedUser = result.user;
             // console.log(loggedUser);
 
