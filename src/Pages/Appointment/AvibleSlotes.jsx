@@ -10,16 +10,18 @@ import { json } from "react-router-dom";
 import useAdmin from "../../Component/Hooks/useAdmin";
 import {toast} from 'react-hot-toast';
 import useAuth from "../../Component/Hooks/UseAuth";
+import useServices from "../../Component/Hooks/useServices";
 Modal.setAppElement("#root");
 
 const AvibleSlotes = () => {
   const { user, loading } = useAuth();
   const [isAdmin, isAdminLoading] = useAdmin();
   // console.log(isAdmin);
-  const { data: services = [], refetch } = useQuery(["services"], async () => {
-    const res = await fetch(`${import.meta.env.VITE_LOCALHOST_KEY}/services`);
-    return res.json();
-  });
+  const [services] = useServices()
+  // const { data: services = [], refetch } = useQuery(["services"], async () => {
+  //   const res = await fetch(`${import.meta.env.VITE_LOCALHOST_KEY}/services`);
+  //   return res.json();
+  // });
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
@@ -88,11 +90,13 @@ const AvibleSlotes = () => {
 
     if (previousBooking) {
       const book = {
+        serviceId : previousBooking._id,
         time: previousBooking.time,
         doctorName: previousBooking.doctorName,
         serviceName: previousBooking.name,
         allSlots: previousBooking.allSlots,
         availableSlots: previousBooking.availableSlots,
+        price:previousBooking.price,
         name: data.name,
         email: data.email,
         phone: data.number,

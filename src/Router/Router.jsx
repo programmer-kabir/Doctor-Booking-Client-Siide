@@ -10,6 +10,8 @@ import Appointment from "../Pages/Appointment/Appointment";
 import UserAppoinment from "../Pages/Dashboard/User/UserAppoinment/UserAppoinment";
 import Reviews from "../Pages/Dashboard/User/Reviews/Reviews";
 import History from "../Pages/Dashboard/User/History/History";
+import PaymentSuccess from "../Pages/Dashboard/User/Payment/PaymentSuccess/PaymentSuccess";
+import PaymentFail from "../Pages/Dashboard/User/Payment/PaymentFail/PaymentFail";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,14 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/history",
         element: <History />,
+      },
+      {
+        path: "/dashboard/payment/success/:tranId",
+        element: <PaymentSuccess />,
+      },
+      {
+        path: "/dashboard/payment/fail/:tranId",
+        element: <PaymentFail />,
       },
     ],
   },
