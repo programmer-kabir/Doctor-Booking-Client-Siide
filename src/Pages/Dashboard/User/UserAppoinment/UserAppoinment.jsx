@@ -54,7 +54,16 @@ const UserAppoinment = () => {
       selectedServiceId = selectedAppointment.serviceId;
     }
     data.serviceId = selectedServiceId
-
+    console.log(selectedServiceId);
+    
+    // const selectedAppointmentId = appointmentData.find(appointment => appointment._id !== appointment._id);
+    let selectedId = null;
+    if (selectedAppointment) {
+      selectedId = selectedAppointment._id;
+    }
+    console.log(selectedId);
+    data.selectId = selectedId
+    
     fetch(`${import.meta.env.VITE_LOCALHOST_KEY}/payment`,{
       method:'POST',
       headers:{'content-type':'application/json'},
@@ -65,6 +74,7 @@ const UserAppoinment = () => {
       window.location.replace(data.url)
       console.log(data);
     })
+    
   };
 
  
