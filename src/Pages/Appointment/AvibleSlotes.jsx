@@ -18,10 +18,7 @@ const AvibleSlotes = () => {
   const [isAdmin, isAdminLoading] = useAdmin();
   // console.log(isAdmin);
   const [services] = useServices()
-  // const { data: services = [], refetch } = useQuery(["services"], async () => {
-  //   const res = await fetch(`${import.meta.env.VITE_LOCALHOST_KEY}/services`);
-  //   return res.json();
-  // });
+  // console.log(services);
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
@@ -79,9 +76,6 @@ const AvibleSlotes = () => {
     localStorage.setItem("service", JSON.stringify(previousBooking));
   };
 
-  const clearBooking = () => {
-    localStorage.removeItem("service");
-  };
 
   const onSubmit = (data) => {
     const local = localStorage.getItem("service");
@@ -150,13 +144,9 @@ const AvibleSlotes = () => {
               <div className="text-center border-black rounded-md mb-5 py-5">
                 <h2 className="text-[#19D3AE] font-medium ">{service.name}</h2>
                 <h5>{service.time}</h5>
-                {/* <button
-                  onClick={() => handleBook(service)}
-                  className="primary-btn mt-5"
-                >
-                  Book Appointment
-                </button> */}
-                {isAdmin ? (
+                <h5>{service.availableSlots} SPACES AVAILABLE</h5>
+                
+                {isAdmin || service.availableSlots === 0  ? (
                   <button className="primary-btn mt-5" disabled>
                     Book Appointment
                   </button>
