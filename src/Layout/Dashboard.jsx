@@ -14,6 +14,7 @@ const Dashboard = () => {
           <div className="p-5">
             <Outlet />
           </div>
+          
         </div>
       </div>
       <Footer />
