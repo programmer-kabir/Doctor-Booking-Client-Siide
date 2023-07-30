@@ -12,6 +12,9 @@ import Reviews from "../Pages/Dashboard/User/Reviews/Reviews";
 import History from "../Pages/Dashboard/User/History/History";
 import PaymentSuccess from "../Pages/Dashboard/User/Payment/PaymentSuccess/PaymentSuccess";
 import PaymentFail from "../Pages/Dashboard/User/Payment/PaymentFail/PaymentFail";
+import About from "../Pages/About/About";
+import Revirews from "../Pages/Revirews/Revirews";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +24,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/review",
+        element: <Revirews />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "/login",

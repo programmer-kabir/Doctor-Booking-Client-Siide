@@ -6,14 +6,14 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 .primary-btn {
-  background: linear-gradient(90deg, #19d3ae 0%, #0fcfec 100%);
+  /* background: linear-gradient(90deg, #19d3ae 0%, #0fcfec 100%); */
+  background-color: #F7A582;
   padding: 12px 14px;
   border-radius: 8px;
   font-weight: 600;
   color: white;
 }
 .primary-btn:hover{
-  background: linear-gradient(180deg, #19d3ae 0%, #0fcfec 100%);
   color: rgb(24, 24, 24);
   transition: 0.3s ease-in-out;
 }
